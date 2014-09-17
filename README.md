@@ -9,3 +9,12 @@ there's no overarching framework here.
 [controversial](https://blog.jcoglan.com/2014/02/05/building-javascript-projects-with-make/),
 the front-end community has largely settled on JavaScript-based build tools -
 thus the ecosystem is evolving around those, rendering them almost inescapable.
+
+
+Getting Started
+---------------
+
+* `npm install https://github.com/innoq/feta.git` (note that the
+  [feta package on npm](https://www.npmjs.org/package/feta) is unrelated)
+* use tasks as demonstrated in [`samples/gulpfile.js`](samples/gulpfile.js)
+  (note that this might require `npm`-installing additional packages)
