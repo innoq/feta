@@ -18,3 +18,8 @@ Getting Started
   [feta package on npm](https://www.npmjs.org/package/feta) is unrelated)
 * use tasks as demonstrated in [`samples/gulpfile.js`](samples/gulpfile.js)
   (note that this might require `npm`-installing additional packages)
+
+
+----
+
+licensed under the Apache License, version 2.0
