@@ -1,0 +1,6 @@
+{
+    "preset": "jquery",
+    "requireMultipleVarDecl": null,
+    "requireSpaceAfterKeywords": null,
+    "requireSpacesInsideArrayBrackets": null
+}
