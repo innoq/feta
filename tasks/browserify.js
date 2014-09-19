@@ -6,7 +6,7 @@ var gulp = require("gulp");
 // `target` is the bundle's file path
 module.exports = function(entryPoint, target) {
 	return function() { // gulp task
-		bundle(target, entryPoint);
+		bundle(entryPoint, target);
 		// TODO: return value?
 	};
 };
@@ -14,12 +14,12 @@ module.exports = function(entryPoint, target) {
 // arguments are the same as above
 // NB: not a gulp task
 module.exports.watchify = function(entryPoint, target) {
-	bundle(target, entryPoint, true);
+	bundle(entryPoint, target, true);
 	// TODO: return value?
 };
 
 // TODO: blank bundle on error
-function bundle(target, entryPoint, watch) {
+function bundle(entryPoint, target, watch) {
 	var argv = [null, null];
 
 	var module = "browserify/bin/cmd";
