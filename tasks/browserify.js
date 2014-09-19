@@ -1,4 +1,4 @@
-/*jslint node: true, vars: true, white: true */
+/*jshint node: true */
 "use strict";
 
 var gulp = require("gulp");
