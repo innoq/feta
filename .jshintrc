@@ -1,3 +1,4 @@
 {
-    "curly": true
+	"curly": true,
+	"node": true
 }
