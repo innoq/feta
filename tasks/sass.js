@@ -10,16 +10,21 @@ var gutil = require("gulp-util");
 // `entryPoint` is a Sass file
 // `target` is the bundle's file name
 // `destination` is the bundle's directory
-module.exports = function(entryPoint, target, destination) {
+// `options` is passed through to gulp-sass
+module.exports = function(entryPoint, target, destination, options) {
+	options = options || {};
 	return function() { // gulp task
-		var options = {
+		var settings = {
 			errLogToConsole: true,
 			onError: function(err) { // TODO: blank bundle
 				gutil.log("ERROR: Sass compilation failed", err.message);
 			}
 		};
+		for(var prop in options) {
+			settings[prop] = options[prop];
+		}
 		return gulp.src(entryPoint).
-			pipe(sass(options)).
+			pipe(sass(settings)).
 			pipe(autoprefixer()). // TODO: target browsers
 			pipe(rename(target)).
 			pipe(gulp.dest(destination));
