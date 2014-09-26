@@ -14,7 +14,7 @@ thus the ecosystem is evolving around those, rendering them almost inescapable.
 Getting Started
 ---------------
 
-* `npm install https://github.com/innoq/feta.git` (note that the
+* `npm install git+https://git@github.com/innoq/feta.git` (note that the
   [feta package on npm](https://www.npmjs.org/package/feta) is unrelated)
 * use tasks as demonstrated in [`samples/gulpfile.js`](samples/gulpfile.js)
   (note that this might require `npm`-installing additional packages)
