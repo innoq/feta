@@ -12,13 +12,18 @@ var paths = {
 	sassAll: "styles/**/*.scss",
 	css: "bundle.css",
 	jsEntry: "scripts/main.js",
-	csEntry: "scripts/main.coffee", // unused
 	jsAll: "scripts/**/*.js",
 	js: "bundle.js",
 	distro: "dist"
 };
 
-var jsExtensions = [".coffee"]; // unused
+// CoffeeScript support
+// NB:
+// * unused, for illustration purposes only
+// * this requires an entry like `"browserify": { "transform": ["coffeeify"] }`
+//   in `package.json`
+paths.csEntry = "scripts/main.coffee";
+var jsExtensions = [".coffee"];
 
 gulp.task("autocompile", ["styles"], function() {
 	gulp.watch(paths.sassAll, ["styles"]);
