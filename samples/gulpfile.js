@@ -17,6 +17,8 @@ var paths = {
 	distro: "dist"
 };
 
+var jsExport = "MyInterface";
+
 // CoffeeScript support
 // NB:
 // * unused, for illustration purposes only
@@ -29,7 +31,7 @@ gulp.task("autocompile", ["styles"], function() {
 	gulp.watch(paths.sassAll, ["styles"]);
 	gulp.watch(paths.jsAll, ["lint"]);
 	browserify.watchify(paths.jsEntry, path.join(paths.distro, paths.js),
-			jsExtensions);
+			jsExtensions, jsExport);
 	// TODO: return value?
 });
 
@@ -38,7 +40,7 @@ gulp.task("lint", ["jshint", "jscs"]);
 gulp.task("styles", sass(paths.sassEntry, paths.css, paths.distro));
 
 gulp.task("browserify", browserify(paths.jsEntry,
-		path.join(paths.distro, paths.js), jsExtensions));
+		path.join(paths.distro, paths.js), jsExtensions, jsExport));
 
 gulp.task("jscs", jscs(paths.jsAll));
 
